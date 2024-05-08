@@ -198,7 +198,9 @@ text.
 During rendering, React will convert this element to an actual DOM
 element:
 
-\<h1 id="recipe-0"\>Baked Salmon\</h1\>
+``` html
+<h1>Baked Salmon</h1>
+```
 
 The properties are similarly applied to the new DOM element:
 
@@ -262,23 +264,27 @@ The element that we wish to render is passed as the first argument and
 the second argument is the target node, where we should render the
 element:
 
-const dish = React.createElement("h1",  null,  "Baked Salmon");
+``` js
+const dish = React.createElement("h1",  null,  "Baked Salmon");
 
 ReactDOM.render(dish,document.getElementById("root"));
+```
 
 Rendering the title element to the DOM would add an h1 element to the
 div with the id of root, which we would already have defined in our
 HTML. We build this div inside the body tag:
 
-\<body\>
+```
+<body>
 
-\<div id="root"\>
+<div id="root">
 
-\<h1\>Baked Salmon\</h1\>
+<h1>Baked Salmon</h1>
 
-\</div\>
+</div>
 
-\</body\>
+</body>
+```
 
 Anything related to rendering elements to the DOM is found in the
 ReactDOM package.
@@ -286,11 +292,13 @@ ReactDOM package.
 In versions of React earlier than React 16, you could only render one
 element to the DOM. Today, it’s possible to render arrays as well.
 
-const dish = React.createElement("h1",  null,  "Baked Salmon");
+``` js
+const dish = React.createElement("h1",  null,  "Baked Salmon");
 
-const dessert = React.createElement("h2",  null,  "Coconut Cream Pie");
+const dessert = React.createElement("h2",  null,  "Coconut Cream Pie");
 
-ReactDOM.render(\[dish,  dessert\], document.getElementById("root"));
+ReactDOM.render([dish,  dessert], document.getElementById("root"));
+```
 
 This will render both of these elements as siblings inside of the root
 container.
@@ -312,47 +320,42 @@ The tree has one root element from which many branches grow.
 
 consider the unordered list that contains ingredients:
 
-\<ul\>
-
-\<li\>2 lb salmon\</li\>
-
-\<li\>5 sprigs fresh rosemary\</li\>
-
-\<li\>2 tablespoons olive oil\</li\>
-
-\<li\>2 small lemons\</li\>
-
-\<li\>1 teaspoon kosher salt\</li\>
-
-\<li\>4 cloves of chopped garlic\</li\>
-
-\</ul\>
+``` html
+<ul>
+<li>2 lb salmon</li>
+<li>5 sprigs fresh rosemary</li>
+<li>2 tablespoons olive oil</li>
+<li>2 small lemons</li>
+<li>1 teaspoon kosher salt</li>
+<li>4 cloves of chopped garlic</li>
+</ul>
+```
 
 the unordered list is the root element, and it has six children.
 
 We can represent this ul and its children with React.createElement:
 
-  
-
+``` js
 React.createElement(
 
 "ul",
 
 null,
 
-React.createElement("li",  null,  "2 lb salmon"),
+React.createElement("li",  null,  "2 lb salmon"),
 
-React.createElement("li",  null,  "5 sprigs fresh rosemary"),
+React.createElement("li",  null,  "5 sprigs fresh rosemary"),
 
-React.createElement("li",  null,  "2 tablespoons olive oil"),
+React.createElement("li",  null,  "2 tablespoons olive oil"),
 
-React.createElement("li",  null,  "2 small lemons"),
+React.createElement("li",  null,  "2 small lemons"),
 
-React.createElement("li",  null,  "1 teaspoon kosher salt"),
+React.createElement("li",  null,  "1 teaspoon kosher salt"),
 
-React.createElement("li",  null,  "4 cloves of chopped garlic")
+React.createElement("li",  null,  "4 cloves of chopped garlic")
 
 );
+```
 
 Every additional argument sent to the createElement function is another
 child element.

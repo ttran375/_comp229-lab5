@@ -212,23 +212,17 @@ construct the DOM element.
 
 If you were to log this element, it would look like this:
 
+```
 {
-
 }
-
-\$\$typeof: Symbol(React.element),
-
+$$typeof: Symbol(React.element),
 "type": "h1",
-
 "key": null,
-
 "ref": null,
-
-"props": {id: "recipe-0",  children: "Baked Salmon"},
-
-"\_owner": null,
-
-"\_store": {}
+"props": {id: "recipe-0",  children: "Baked Salmon"},
+"_owner": null,
+"_store": {}
+```
 
 This is the structure of a React element.
 

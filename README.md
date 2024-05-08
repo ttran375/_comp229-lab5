@@ -501,30 +501,33 @@ Example:
 
 the unordered list
 
+``` js
 React.createElement(
 
 "ul",
 
 null,
 
-React.createElement("li",  null,  "2 lb salmon"),
+React.createElement("li",  null,  "2 lb salmon"),
 
-React.createElement("li",  null,  "5 sprigs fresh rosemary"),
+React.createElement("li",  null,  "5 sprigs fresh rosemary"),
 
-React.createElement("li",  null,  "2 tablespoons olive oil"),
+React.createElement("li",  null,  "2 tablespoons olive oil"),
 
-React.createElement("li",  null,  "2 small lemons"),
+React.createElement("li",  null,  "2 small lemons"),
 
-React.createElement("li",  null,  "1 teaspoon kosher salt"),
+React.createElement("li",  null,  "1 teaspoon kosher salt"),
 
-React.createElement("li",  null,  "4 cloves of chopped garlic")
+React.createElement("li",  null,  "4 cloves of chopped garlic")
 
 );
+```
 
 The data used in this list of ingredients can be easily represented
 using a JavaScript array:
 
-const items = \[
+``` js
+const items = [
 
 "2 lb salmon",
 
@@ -538,7 +541,8 @@ const items = \[
 
 "4 cloves of chopped garlic"
 
-\];
+];
+```
 
 We want to use this data to generate the correct number of list items
 without having to hard code each one.

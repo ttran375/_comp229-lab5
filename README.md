@@ -369,61 +369,61 @@ props.children.
 
 If you console log this element:
 
+``` js
 const list = React.createElement(
 
 "ul",
 
 null,
 
-React.createElement("li",  null,  "2 lb salmon"),
+React.createElement("li",  null,  "2 lb salmon"),
 
-React.createElement("li",  null,  "5 sprigs fresh rosemary"),
+React.createElement("li",  null,  "5 sprigs fresh rosemary"),
 
-React.createElement("li",  null,  "2 tablespoons olive oil"),
+React.createElement("li",  null,  "2 tablespoons olive oil"),
 
-React.createElement("li",  null,  "2 small lemons"),
+React.createElement("li",  null,  "2 small lemons"),
 
-React.createElement("li",  null,  "1 teaspoon kosher salt"),
+React.createElement("li",  null,  "1 teaspoon kosher salt"),
 
-React.createElement("li",  null,  "4 cloves of chopped garlic")
+React.createElement("li",  null,  "4 cloves of chopped garlic")
 
 );
 
 console.log(list);
+```
 
 The result will look like this:
 
+```
 {
 
 "type": "ul",
 
 "props": {
 
-"children": \[
+"children": [
 
-{  "type": "li",  "props": {  "children": "2 lb salmon" }  …    },
+{  "type": "li",  "props": {  "children": "2 lb salmon" }  …    },
 
-{  "type": "li",  "props": {  "children": "5 sprigs fresh rosemary"} 
-…    },
+{  "type": "li",  "props": {  "children": "5 sprigs fresh rosemary"}  …    },
 
-{  "type": "li",  "props": {  "children": "2 tablespoons olive oil" } 
-…    },
+{  "type": "li",  "props": {  "children": "2 tablespoons olive oil" }  …    },
 
-{  "type": "li",  "props": {  "children": "2 small lemons"}  …    },
+{  "type": "li",  "props": {  "children": "2 small lemons"}  …    },
 
-{  "type": "li",  "props": {  "children": "1 teaspoon kosher salt"} 
-…    },
+{  "type": "li",  "props": {  "children": "1 teaspoon kosher salt"}  …    },
 
-{  "type": "li",  "props": {  "children": "4 cloves of chopped garlic"} 
-…    }
+{  "type": "li",  "props": {  "children": "4 cloves of chopped garlic"}  …    }
 
-\]
+]
 
 ...
 
 }
 
 }
+```
 
 each list item is a child
 

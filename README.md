@@ -1,16 +1,5 @@
 # How React Works  
 
-## Topic Content
-
-<a href="How%20React%20WorksN.pptx?isCourseFile=true" target="_self">How
-React WorksN.pptx</a>
-
-<a href="WEEK2-HOWREACTWORKS.zip?isCourseFile=true"
-target="_self">WEEK2-HOWREACTWORKS.zip</a>
-
-<a href="How%20React%20Works.docx?isCourseFile=true" target="_self">How
-React Works.docx</a>
-
 # How React Works  
 
 **HOW REACT WORKS**
@@ -43,7 +32,6 @@ libraries:
 1.  React and
 2.  ReactDOM.
 
-  
 
 React is the library for creating views.
 

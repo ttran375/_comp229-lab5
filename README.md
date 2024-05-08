@@ -550,15 +550,15 @@ without having to hard code each one.
 We can map over the array and create list items for as many ingredients
 as there are:
 
-  
-
+``` js
 React.createElement("ul",
 
-{  className: "ingredients" },
+{  className: "ingredients" },
 
-items.map(ingredient =\> React.createElement("li", null, ingredient))
+items.map(ingredient => React.createElement("li", null, ingredient))
 
 );
+```
 
 This syntax creates a React element for each ingredient in the array.
 
@@ -581,93 +581,65 @@ each of the list item elements.
 
 We can use the array index for each ingredient as that unique value:
 
+``` js
 React.createElement(
 
 "ul",
 
-{  className: "ingredients" },
+{  className: "ingredients" },
 
-items.map((ingredient,  i)  =\>
+items.map((ingredient,  i)  =>
 
-React.createElement("li",  {  key: i },  ingredient)
+React.createElement("li",  {  key: i },  ingredient)
 
 )
 
 );
+```
 
 adding this to each list item will clear the console warning.
 
 **Adjusted code**
 
-\<!DOCTYPE html\>
+``` html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>React Samples</title>
+</head>
+<body>
+  <!-- Target container -->
+  <div id="root"></div>
 
-\<html\>
+  <!-- React library & ReactDOM (Development Version) -->
+  <script src="https://unpkg.com/react@16.8.6/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16.8.6/umd/react-dom.development.js"></script>
 
-\<head\>
+  <script>
+    const items = [
+      "2 lb salmon",
+      "5 sprigs fresh rosemary",
+      "2 tablespoons olive oil",
+      "2 small lemons",
+      "1 teaspoon kosher salt",
+      "4 cloves of chopped garlic"
+    ];
 
-\<meta charset="utf-8" /\>
+    const list = React.createElement(
+      "ul",
+      { className: "ingredients" },
+      items.map((ingredient, i) =>
+        React.createElement("li", { key: i }, ingredient)
+      )
+    );
 
-\<title\>React Samples\</title\>
+    ReactDOM.render(list, document.getElementById("root"));
+  </script>
+</body>
+</html>
+```
 
-\</head\>
-
-\<body\>
-
-  \<!-- Target container --\>
-
-  \<div id="root"\>\</div\>
-
-  
-  \<!-- React library & ReactDOM (Development Version) --\>
-
-  \<script
-src="<https://unpkg.com/react@16.8.6/umd/react.development.js>"\>\</script\>
-
-  \<script
-src="<https://unpkg.com/react-dom@16.8.6/umd/react-dom.development.js>"\>\</script\>
-
-  
-  \<script\>
-
-    const items = \[
-
-      "2 lb salmon",
-
-      "5 sprigs fresh rosemary",
-
-      "2 tablespoons olive oil",
-
-      "2 small lemons",
-
-      "1 teaspoon kosher salt",
-
-      "4 cloves of chopped garlic"
-
-    \];
-
-  
-    const list = React.createElement(
-
-      "ul",
-
-      { className: "ingredients" },
-
-      items.map((ingredient, i) =\>
-
-        React.createElement("li", { key: i }, ingredient)
-
-      )
-
-    );
-
-  
-    ReactDOM.render(list, document.getElementById("root"));
-
-  \</script\>
-
-\</body\>
-
-\</html\>
 
 **Output in the Browser**
 
